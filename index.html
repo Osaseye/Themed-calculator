@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Segun's Themed Calculator</title>
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/League+Spartan">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-1">
+  <div class="calculator">
+    <div class="header">
+      <span class="title" aria-label="Calculator Title">calc</span>
+      <div class="theme-toggle">
+        <span>THEME</span>
+        <div class="toggle-group">
+        <div class="toggle-label">
+          <label for="Theme 1">1</label>
+          <label for="Theme 2">2</label>
+          <label for="Theme 3">3</label>
+        </div>
+        <div class="toggle-switch" role="button" aria-label="Toggle Theme" tabindex="0" onclick="toggleTheme()">
+          <div class="toggle-ball"></div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="display" id="display" aria-live="polite">0</div>
+    <div class="buttons">
+      <button class="btn" aria-label="Seven" onclick="appendNumber('7')">7</button>
+      <button class="btn" aria-label="Eight" onclick="appendNumber('8')">8</button>
+      <button class="btn" aria-label="Nine" onclick="appendNumber('9')">9</button>
+      <button class="btn-del" aria-label="Delete" onclick="deleteLast()">DEL</button>
+      <button class="btn" aria-label="Four" onclick="appendNumber('4')">4</button>
+      <button class="btn" aria-label="Five" onclick="appendNumber('5')">5</button>
+      <button class="btn" aria-label="Six" onclick="appendNumber('6')">6</button>
+      <button class="btn" aria-label="Add" onclick="appendOperator('+')">+</button>
+      <button class="btn" aria-label="One" onclick="appendNumber('1')">1</button>
+      <button class="btn" aria-label="Two" onclick="appendNumber('2')">2</button>
+      <button class="btn" aria-label="Three" onclick="appendNumber('3')">3</button>
+      <button class="btn" aria-label="Subtract" onclick="appendOperator('-')">-</button>
+      <button class="btn" aria-label="Decimal" onclick="appendNumber('.')">.</button>
+      <button class="btn" aria-label="Zero" onclick="appendNumber('0')">0</button>
+      <button class="btn" aria-label="Divide" onclick="appendOperator('/')">/</button>
+      <button class="btn" aria-label="Multiply" onclick="appendOperator('*')">x</button>
+    </div>
+    <div class="bucks">
+      <button class="btn-reset" aria-label="Reset Calculator" onclick="resetCalculator()">RESET</button>
+      <button class="btn-equal" aria-label="Calculate Result" onclick="calculateResult()">=</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
